@@ -18,11 +18,10 @@ export default class Portfolio extends React.Component {
           <Link to="/contact" className="btn-primary mb-160">
             Contact me                                     
           </Link>
-        </div>
-        <div className="">
+        </div>        
           <div className="row row-center">
             <div className="col-auto">
-              <div className="portfolio-box">
+              <div className="portfolio-box mb-32">
                 <a href="" className="portfolio-link-project1">
                   <img src={Logo1} alt="project1" />
                   <span className="sr-only">
@@ -35,16 +34,19 @@ export default class Portfolio extends React.Component {
                 <h6>                  
                   bezzavislosti.cz
                 </h6>
-                <div className="portfolio-project-assets">
-                  <a className="portfolio-project-asset">
+                <div>
+                  <a className="portfolio-project-asset" href="">
                     Sketch artboards
                   </a>
-                  <a className="portfolio-project-asset">
+                 </div>
+                 <div>
+                  <a className="portfolio-project-asset" href="">
                     PUG,SCSS
                   </a>
+                  </div>
                 </div>                
               </div>
-            </div>
+            
             <div className="col-auto">
             <div className="portfolio-box">
                 <a href="" className="portfolio-link-project2">
@@ -59,22 +61,23 @@ export default class Portfolio extends React.Component {
                 <h6>                  
                   Crofts Accountants
                 </h6>
-                <div className="portfolio-project-assets">
-                  <a className="portfolio-project-asset">
+                <div>
+                  <a className="portfolio-project-asset" href="">
                     Sketch artboards
                   </a>
-                  <a className="portfolio-project-asset">
+                  </div>
+                  <div>
+                  <a className="portfolio-project-asset" href="">
                     Styleguide
                   </a>
-                  <a className="portfolio-project-asset">
+                  </div>
+                  <a className="portfolio-project-asset" href="">
                     React, SCSS
                   </a>
-                </div>                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      
+                  </div>
+                </div>  
+                </div>              
+              </div>                
     );
   }
 }

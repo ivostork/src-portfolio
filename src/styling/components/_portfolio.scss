@@ -1,9 +1,9 @@
 @include keyframes(heroDown) {
   0% { 
-    transform: translate3d(0,-250%,0);
+    transform: scale(.5);
   }
   100% { 
-    transform: translate3d(0,0%,0); 
+    transform: scale(1);
   }
 }
 
@@ -27,10 +27,28 @@
     box-sizing: border-box;
     background-color: color(2);
     padding: rem(32);
+    margin-bottom: rem(24);
 
     img {
       max-width:100%;
       box-shadow:0 2px 16px rgba(0,0,0,.54);
     }
   }
+
+    .portfolio-project-desc {
+      font-size:rem(12);
+      color:color(5);
+      margin-bottom:0;
+    }
+
+    .portfolio-project-asset {            
+      display: inline-block;
+      font-size:rem(20);
+      color:color(5);
+      text-decoration: none;
+      font-weight: 600;
+
+      padding-right: rem(28);
+      background:url("./../content/link.svg") no-repeat right;
+    }
 }
