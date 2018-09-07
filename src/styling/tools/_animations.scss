@@ -3,10 +3,10 @@
 ///////////////
 
 .element {
-  @include fnz-animation(myAnim);
+  @include animation(myAnim);
 }
 
-@include fnz-keyframes(myAnim) {
+@include keyframes(myAnim) {
   0% { color: red }
   100% { color: green }
 }

@@ -21,9 +21,9 @@
 
 @font-face
 {
-  font-family: Roboto;
-  src: url("../content/fonts/roboto-regular-webfont.woff") format("woff"),
-        url("../content/fonts/roboto-regular-webfont.woff2") format("woff2");
+  font-family: Montserrat;
+  src: url("../content/fonts/montserrat-regular-webfont.woff") format("woff"),
+        url("../content/fonts/montserrat-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 
@@ -32,10 +32,10 @@
 
 @font-face
 {
-  font-family: Roboto;
-  src: url("../content/fonts/roboto-medium-webfont.woff") format("woff"),
-        url("../content/fonts/roboto-medium-webfont.woff2") format("woff2");
-  font-weight: bold;
+  font-family: Montserrat;
+  src: url("../content/fonts/montserrat-semibold-webfont.woff") format("woff"),
+        url("../content/fonts/montserrat-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 
   @include font-display;
@@ -43,26 +43,28 @@
 
 @font-face
 {
-  font-family: Roboto;
-  src: url("../content/fonts/roboto-black-webfont.woff") format("woff"),
-        url("../content/fonts/roboto-black-webfont.woff2") format("woff2");
-  font-weight: 900;
+  font-family: Montserrat;
+  src: url("../content/fonts/montserrat-bold-webfont.woff") format("woff"),
+        url("../content/fonts/montserrat-bold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+
+  @include font-display;
+}
+
+@font-face
+{
+  font-family: Montserrat;
+  src: url("../content/fonts/montserrat-extrabold-webfont.woff") format("woff"),
+        url("../content/fonts/montserrat-extrabold-webfont.woff2") format("woff2");
+  font-weight: 800;
   font-style: normal;
 
   @include font-display;
 }
 
 //https://www.cssfontstack.com/Arial
-$font-family: Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;
-
-//Icons
-@font-face
-{
-  font-family: Icomoon;
-  src: url("../content/fonts/icomoon.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+$font-family: Montserrat,Arial,"Helvetica Neue",Helvetica,sans-serif;
 
  
 html {
@@ -95,16 +97,21 @@ ul {
 
 //main page heading
 h1{
-  font-weight: 900;
-  font-size: rem(34);
-  margin-bottom: rem(40);
+  font-weight: 600;
+  font-size: rem(48);
+  margin-top:rem(120);
+  margin-bottom: rem(60);
 }
 
-//form category heading
+//portfolio projet title
 h6{
   font-size:rem(20);
   font-weight:bold;
-  padding-bottom:rem(8);
-  border-bottom: 1px solid color(2);
-  margin-bottom: rem(24);
+  margin-bottom: rem(8);
+}
+
+a {
+  color:color(1);
+  text-decoration: underline;
+  font-weight: 600;
 }

@@ -5,22 +5,15 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    styleguide: './src/apps/styleguide/index.jsx',
     app: './src/apps/app/index.jsx'
   },
   plugins: [
     new CleanWebpackPlugin(['web/*.*'], {root: path.resolve(__dirname , '..'), verbose: true }),
     new HtmlWebpackPlugin({
-      template: './src/styleguide.html',
-      inject: false,
-      chunks: ['styleguide'],
-      filename:'styleguide.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/app.html',
+      template: './src/index.html',
       inject: false,
       chunks: ['app'],
-      filename:'app.html'
+      filename:'index.html'
     }),
     new ExtractTextPlugin('style.css')    
   ],

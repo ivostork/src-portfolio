@@ -1,61 +1,70 @@
 import React from "react";
-import Navigation from './navigation';
-import NavigationLightbox from './navigationLightbox';
-import ResponsiveHeader from './responsiveHeader';
 
-import { Route, Link } from "react-router-dom";
+import { Route, Link, NavLink } from "react-router-dom";
 
-import Inbox from "./pages/inbox";
-import Search from "./pages/search";
+import Portfolio from "./pages/portfolio";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 
 
 export default class Structure extends React.Component {  
   constructor(props) {
     super(props);
-    this.state = {
-      isLightboxOn: false
-    };
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleNavigationButton = this.handleNavigationButton.bind(this);
-    this.handleCloseButton = this.handleCloseButton.bind(this);
-  }
-
-  handleNavigationButton() {
-    this.setState(prevState => ({
-      isLightboxOn: !prevState.isLightboxOn
-    }));
-  }
-
-  handleCloseButton() {
-    this.setState(() => ({
-      isLightboxOn: false
-    }));
-  }
+  }  
 
   render() {            
     return (
-      <div>
-        {/* space for lightbox */} 
-        <NavigationLightbox closeNavigation={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn}>
-          <Navigation handleCloseButton={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn} />                
-        </NavigationLightbox>
-        <div>
+      <div className="layout">        
           <div className="header">
             <div className="container">
-              <ResponsiveHeader toggleNavigation={this.handleNavigationButton}>
-                <Navigation handleCloseButton={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn} />                              
-              </ResponsiveHeader>                                  
-            </div>
-          </div>        
-          <div className="container">                         
-            <div className="layout"> 
-              <Route exact path="/" component={Inbox} />          
-              <Route path="/inbox" component={Inbox} />
-              <Route path="/search" component={Search} />                                                                 
-            </div>          
+              <div className="header-flex">
+                <Link to="/" className="logo">
+                  Ivo Stork                                      
+                </Link>
+                <nav className="navigation">
+                  <NavLink to="/portfolio">Portfolio</NavLink>
+                  <NavLink to="/about">About</NavLink>
+                  <NavLink to="/contact">Contact</NavLink>
+                </nav>
+              </div>                                                                                 
+            </div>            
           </div>
-        </div>
+          
+          <div className="layout-content">
+            <div className="container">            
+              <Route exact path="/" component={Portfolio} />                        
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />                                                                                       
+            </div>
+          </div>
+          
+          <div className="footer">
+            <div className="container">
+              <div className="footer-flex">
+                <span className="footer-copyright">
+                  Copyright © 2018 Ivo Stork
+                </span>
+                <div className="footer-links">
+                  <span className="footer-email">
+                    Design+Code by ivos.stork@gmail.com
+                  </span>
+                  <div className="footer-links-icons">
+                    <a href="" className="footer-link-github">
+                      <span className="sr-only">
+                        github link
+                      </span>
+                    </a>
+                    <a href="" className="footer-link-linkedin">
+                      <span className="sr-only">
+                        Linkedin
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                                                   
       </div>
     );
   }

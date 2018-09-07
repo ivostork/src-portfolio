@@ -1,0 +1,52 @@
+.footer {  
+  padding: rem(8) 0;
+  background-color: color(4);
+  font-size:rem(12);  
+
+  .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+    .footer-copyright {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;      
+      flex-wrap: wrap;
+    }
+
+      .footer-email{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      .footer-links-icons {
+        display: flex;
+      }
+
+      [class^="footer-link-"] {
+        flex:0 1 rem(24);
+        height: rem(24);
+        min-width: rem(24);
+        margin-left: rem(16);
+        
+        &:focus {
+          background-color: color(2);
+        }        
+      }
+
+      .footer-link-github {
+        background:url("./../content/github.svg");
+      }
+
+      .footer-link-linkedin {
+        background: url("./../content/linkedin.svg");
+      }
+
+
+}
