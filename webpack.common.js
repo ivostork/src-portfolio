@@ -8,7 +8,7 @@ module.exports = {
     app: './src/apps/app/index.jsx'
   },
   plugins: [
-    new CleanWebpackPlugin(['web/*.*'], {root: path.resolve(__dirname , '..'), verbose: true }),
+    new CleanWebpackPlugin(['web/*.*'], {root: path.resolve(__dirname , '..'), exclude: ['_redirects'], verbose: true }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: false,

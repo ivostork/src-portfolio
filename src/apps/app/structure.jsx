@@ -52,12 +52,12 @@ export default class Structure extends React.Component {
                     Design+Code by ivos.stork@gmail.com
                   </span>
                   <div className="footer-links-icons">
-                    <a href="" className="footer-link-github">
+                    <a href="https://github.com/ivostork" target="_blank" rel="noopener" className="footer-link-github">
                       <span className="sr-only">
                         github link
                       </span>
                     </a>
-                    <a href="" className="footer-link-linkedin">
+                    <a href="www.linkedin.com/in/ivo-stork" target="_blank" rel="noopener" className="footer-link-linkedin">
                       <span className="sr-only">
                         Linkedin
                       </span>

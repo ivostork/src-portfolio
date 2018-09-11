@@ -6,7 +6,6 @@ import Structure from './structure';
 
 import './../../styling/index.scss';
 
-
 ReactDOM.render(
   <Router>
     <Structure />
