@@ -5,6 +5,7 @@ import { Route, Link, NavLink } from "react-router-dom";
 import Portfolio from "./pages/portfolio";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import Thanks from "./pages/thanks";
 
 
 export default class Structure extends React.Component {  
@@ -35,7 +36,8 @@ export default class Structure extends React.Component {
               <Route exact path="/" component={Portfolio} />                        
               <Route path="/portfolio" component={Portfolio} />
               <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />                                                                                       
+              <Route path="/contact" component={Contact} /> 
+              <Route path="/thanks" component={Thanks} />                                                                                       
             </div>
           </div>
           

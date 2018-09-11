@@ -10,7 +10,7 @@ export default class Contact extends React.Component {
         </h1>
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <form>
+            <form name="contact" method="POST" netlify action="/#/thanks">
               <div className="form-group">
                 <div className="controls-label">
                   <label for="email">
