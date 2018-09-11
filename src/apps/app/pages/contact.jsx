@@ -10,7 +10,7 @@ export default class Contact extends React.Component {
         </h1>
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <form name="contact" method="POST" data-netlify="true" action="/thanks">
+            <form action="https://formspree.io/ivos.stork@gmail.com" method="POST">
               <div className="form-group">
                 <div className="controls-label">
                   <label htmlFor="email">
@@ -18,8 +18,9 @@ export default class Contact extends React.Component {
                   </label>
                 </div>
                 <div className="controls-text">
-                  <input type="text" id="email" name="email" />
-                </div>                
+                  <input type="text" id="email" name="email" type="email" required />
+                </div>  
+                <div className="label-description">Required item</div>              
               </div>
               <div className="form-group">
                 <div className="controls-label">
@@ -28,12 +29,11 @@ export default class Contact extends React.Component {
                   </label>
                 </div>
                 <div className="controls-text">
-                  <textarea id="message" name="message"></textarea>
-                </div>                
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+                <div className="label-description">Required item</div>                              
               </div>
-              <button type="subbmit" className="btn-primary">
-                Send me message
-              </button>
+              <button type="submit" type="submit" className="btn-primary">Send me message</button>                
             </form>
           </div>
         </div>        

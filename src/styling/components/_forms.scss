@@ -24,8 +24,17 @@
 
   &.is-invalid {
     input[type="text"],
+    input[type="email"],
     select {
       border-color:color(8) !important;
     }
-  }   
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    &:invalid {
+      border-color:color(8) !important;
+    }
+  }
 }
