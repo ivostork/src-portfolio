@@ -14,6 +14,17 @@ export default class Structure extends React.Component {
   }  
 
   render() {            
+
+    // only consider an event active if its event id is an odd number
+    const isEmptyUrl = (match, location) => {
+      if (location.pathname === "/" || match) {
+        return true
+      }      
+      else {
+        return false;
+      }      
+    }
+
     return (
       <div className="layout">        
           <div className="header">
@@ -23,7 +34,7 @@ export default class Structure extends React.Component {
                   Ivo Stork                                      
                 </Link>
                 <nav className="navigation">
-                  <NavLink to="/portfolio">Portfolio</NavLink>
+                  <NavLink to="/portfolio" isActive={isEmptyUrl}>Portfolio</NavLink>
                   <NavLink to="/about">About</NavLink>
                   <NavLink to="/contact">Contact</NavLink>
                 </nav>
@@ -57,7 +68,7 @@ export default class Structure extends React.Component {
                         github link
                       </span>
                     </a>
-                    <a href="www.linkedin.com/in/ivo-stork" target="_blank" rel="noopener" className="footer-link-linkedin">
+                    <a href="https://linkedin.com/in/ivo-stork" target="_blank" rel="noopener" className="footer-link-linkedin">
                       <span className="sr-only">
                         Linkedin
                       </span>
