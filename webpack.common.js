@@ -3,6 +3,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+//learn how to merge conflicts in Visual Studio Code
+
 module.exports = {
   entry: {
     app: './src/apps/app/index.jsx'
