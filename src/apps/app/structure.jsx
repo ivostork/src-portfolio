@@ -73,6 +73,11 @@ export default class Structure extends React.Component {
                         Linkedin
                       </span>
                     </a>
+                    <a href="https://dribbble.com/ivosstork" target="_blank" rel="noopener" className="footer-link-dribble">
+                      <span className="sr-only">
+                        Linkedin
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>
