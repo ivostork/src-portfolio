@@ -8,11 +8,10 @@ export default class About extends React.Component {
           My skills
         </h1>          
         <p className="text-width-500">
-          I am an experienced front-end developer. 
-          My main specialization is setting up brand for complex web applications - using HTML/SCSS and React or Pug. 
+          I am an experienced ux developer. My main specialization is delivering both interaction design and code (React, SCSS and accessible HTML).
         </p>
         <p className="text-width-500">
-          I can also create designs for web pages and web apps using my friend Sketch. Please see my <a href="https://github.com/ivostork" target="_blank" rel="noopener">GitHub</a>, <a href="https://linkedin.com/in/ivo-stork" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://dribbble.com/ivosstork" target="_blank" rel="noopener">Dribbble</a>
+          Please see my <a href="https://github.com/ivostork" target="_blank" rel="noopener">GitHub</a>, <a href="https://linkedin.com/in/ivo-stork" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://dribbble.com/ivosstork" target="_blank" rel="noopener">Dribbble</a>
         </p>
       </div>
     );

@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 
 import Logo1 from "./../../../content/project1.jpg";
 import Logo2 from "./../../../content/project2.jpg";
+import Logo3 from "./../../../content/project3.jpg";
+import Logo4 from "./../../../content/project4.jpg";
 
 export default class Portfolio extends React.Component {
   render() {    
@@ -10,16 +12,16 @@ export default class Portfolio extends React.Component {
       <div className="portfolio">
         <div className="portfolio-hero">
           <h1 className="portfolio-hero-copy">
-            I specialize in CSS
+            I love design and code
           </h1>        
           <p className="mb-60">
-            Dad, husband, front-end developer
+            Dad, husband, ux developer
           </p>
           <Link to="/contact" className="btn-primary mb-160">
             Contact me                                     
           </Link>
         </div>        
-          <div className="row row-center">
+          <div className="row">
             <div className="col-auto">
               <div className="portfolio-box mb-32">
                 <a href="https://ivostork.github.io/website-biorezonance/" target="_blank" rel="noopener" className="portfolio-link-project1">
@@ -46,9 +48,53 @@ export default class Portfolio extends React.Component {
                   </div>
                 </div>                
               </div>
+
+              <div className="col-auto">
+              <div className="portfolio-box">
+                <a href="https://sketch.cloud/s/O0dDv/MyyJrK3/play" target="_blank" rel="noopener" className="portfolio-link-project2">
+                  <img src={Logo3} alt="project3" />
+                  <span className="sr-only">
+                    Link to project 3
+                  </span>                  
+                </a>
+                <p className="portfolio-project-desc">
+                  Dummy web application for clients demo
+                </p>
+                <h6>                  
+                  Time stamper
+                </h6>
+                <div>
+                  <a href="https://sketch.cloud/s/O0dDv" target="_blank" rel="noopener" className="portfolio-project-asset">
+                    Sketch artboards
+                  </a>
+                  </div>                  
+                  </div>
+                </div>
+
+                <div className="col-auto">
+              <div className="portfolio-box">
+                <a href="https://sketch.cloud/s/dkZGn/QbbGG5m/play" target="_blank" rel="noopener" className="portfolio-link-project2">
+                  <img src={Logo4} alt="project3" />
+                  <span className="sr-only">
+                    Link to project 3
+                  </span>                  
+                </a>
+                <p className="portfolio-project-desc">
+                  Dummy web application for clients demo
+                </p>
+                <h6>                  
+                  SPUDO
+                </h6>
+                <div>
+                  <a href="https://sketch.cloud/s/dkZGn" target="_blank" rel="noopener" className="portfolio-project-asset">
+                    Sketch artboards
+                  </a>
+                  </div>                  
+                  </div>
+                </div> 
             
             <div className="col-auto">
-            <div className="portfolio-box">
+              <div className="portfolio-box">
                 <a href="https://ivostork.github.io/web-portfolio-project/app.html#/" target="_blank" rel="noopener" className="portfolio-link-project2">
                   <img src={Logo2} alt="project2" />
                   <span className="sr-only">
@@ -76,6 +122,8 @@ export default class Portfolio extends React.Component {
                   </a>
                   </div>
                 </div>  
+
+
                 </div>              
               </div>                
     );
