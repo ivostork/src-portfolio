@@ -23,7 +23,7 @@ export default class Portfolio extends React.Component {
         </div>        
           <div className="row row-center">
             <div className="col-auto">
-              <div className="portfolio-box mb-32">
+              <div className="portfolio-box mb-60">
                 <a href="https://ivostork.github.io/website-biorezonance/" target="_blank" rel="noopener" className="portfolio-link-project1">
                   <img src={Logo1} alt="project1" />
                   <span className="sr-only">
@@ -50,7 +50,7 @@ export default class Portfolio extends React.Component {
               </div>
 
               <div className="col-auto">
-              <div className="portfolio-box mb-32">
+              <div className="portfolio-box mb-60">
                 <a href="https://sketch.cloud/s/O0dDv/MyyJrK3/play" target="_blank" rel="noopener" className="portfolio-link-project2">
                   <img src={Logo3} alt="project3" />
                   <span className="sr-only">
@@ -72,7 +72,7 @@ export default class Portfolio extends React.Component {
                 </div>
 
                 <div className="col-auto">
-              <div className="portfolio-box mb-32">
+              <div className="portfolio-box mb-60">
                 <a href="https://sketch.cloud/s/dkZGn/QbbGG5m/play" target="_blank" rel="noopener" className="portfolio-link-project2">
                   <img src={Logo4} alt="project3" />
                   <span className="sr-only">
@@ -94,7 +94,7 @@ export default class Portfolio extends React.Component {
                 </div> 
             
             <div className="col-auto">
-              <div className="portfolio-box mb-32">
+              <div className="portfolio-box mb-60">
                 <a href="https://ivostork.github.io/web-portfolio-project/app.html#/" target="_blank" rel="noopener" className="portfolio-link-project2">
                   <img src={Logo2} alt="project2" />
                   <span className="sr-only">
@@ -121,7 +121,7 @@ export default class Portfolio extends React.Component {
                     React, SCSS
                   </a>
                   </div>
-                </div>  
+                </div>   
 
 
                 </div>              
