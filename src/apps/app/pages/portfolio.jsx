@@ -47,30 +47,7 @@ export default class Portfolio extends React.Component {
                   </a>
                   </div>
                 </div>                
-              </div>
-
-              <div className="col-auto">
-              <div className="portfolio-box mb-60">
-                <a href="https://sketch.cloud/s/O0dDv/MyyJrK3/play" target="_blank" rel="noopener" className="portfolio-link-project2">
-                  <img src={Logo3} alt="project3" />
-                  <span className="sr-only">
-                    Link to project 3
-                  </span>                  
-                </a>
-                <p className="portfolio-project-desc">
-                  Dummy web application for clients demo
-                </p>
-                <h6>                  
-                  Time stamper
-                </h6>
-                <div>
-                  <a href="https://sketch.cloud/s/O0dDv" target="_blank" rel="noopener" className="portfolio-project-asset">
-                    Sketch artboards
-                  </a>
-                  </div>                  
-                  </div>
-                </div>
-
+              </div>              
                 <div className="col-auto">
               <div className="portfolio-box mb-60">
                 <a href="https://sketch.cloud/s/dkZGn/QbbGG5m/play" target="_blank" rel="noopener" className="portfolio-link-project2">
