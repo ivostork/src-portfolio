@@ -1,12 +1,90 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import Logo1 from "./../../../content/project1.jpg";
-import Logo2 from "./../../../content/project2.jpg";
-import Logo3 from "./../../../content/project3.jpg";
-import Logo4 from "./../../../content/project4.jpg";
+import BezZavislosti from "./../../../content/bez-zavislosti.jpg";
+import Spudo from "./../../../content/spudo.jpg";
+import Schule from "./../../../content/schule.jpg";
 
 export default class Portfolio extends React.Component {
+
+  renderProjects() {
+
+    let portfolioProjects = [
+      {
+        mainURL: "https://ivostork.github.io/website-biorezonance/",
+        hero: BezZavislosti,
+        description: "Web for a friend",
+        title: "bezzavislosti.cz",
+        links: [
+          {
+            linkUrl:"https://sketch.cloud/s/711wZ",
+            linkTitle:"Sketch artboards"
+          },
+          {
+            linkUrl:"https://github.com/ivostork/biorezonance",
+            linkTitle:"PUG,SCSS"
+          },
+        ]
+      },
+      {
+        mainURL: "https://sketch.cloud/s/dkZGn/QbbGG5m/play",
+        hero: Spudo,
+        description: "Dummy web application for clients demo",
+        title: "SPUDO",
+        links: [
+          {
+            linkUrl:"https://sketch.cloud/s/dkZGn",
+            linkTitle:"Sketch artboards"
+          }
+        ]
+      },
+      {
+        mainURL: "https://sketch.cloud/s/YMObZ/xrgrDjm",
+        hero: Schule,
+        description: "Dummy web application for clients demo",
+        title: "Schule IS",
+        links: [
+          {
+            linkUrl:"https://sketch.cloud/s/YMObZ",
+            linkTitle:"Sketch artboards"
+          }
+        ]
+      }
+    ];
+
+    let portfolioProjectsJSX = portfolioProjects.map((item,index) => (
+      <div className="col-auto" key={index}>
+        <div className="portfolio-box mb-60">
+            <a href={item.mainURL} target="_blank" rel="noopener" className="portfolio-link-project">
+              <img src={item.hero} alt="project image" />
+              <span className="sr-only">
+                Link to project
+              </span>
+            </a>
+            <p className="portfolio-project-desc">
+              {item.description}
+            </p>
+            <h6>
+              {item.title}
+            </h6>
+              {
+                item.links.map((projectLink,projectLinkIndex) => (
+                  <div key={projectLinkIndex}>
+                    <a href={projectLink.linkUrl} target="_blank" rel="noopener" className="portfolio-project-asset">
+                      {projectLink.linkTitle}
+                    </a>
+                  </div>
+                ))
+              }
+        </div>
+      </div>
+    )
+    );
+
+    return portfolioProjectsJSX;
+  }
+
+
   render() {    
     return (
       <div className="portfolio">
@@ -20,89 +98,11 @@ export default class Portfolio extends React.Component {
           <Link to="/contact" className="btn-primary mb-160">
             Contact me                                     
           </Link>
-        </div>        
+        </div>
           <div className="row row-center">
-            <div className="col-auto">
-              <div className="portfolio-box mb-60">
-                <a href="https://ivostork.github.io/website-biorezonance/" target="_blank" rel="noopener" className="portfolio-link-project1">
-                  <img src={Logo1} alt="project1" />
-                  <span className="sr-only">
-                    Link to project 1
-                  </span>                  
-                </a>
-                <p className="portfolio-project-desc">
-                  Web for a friend
-                </p>
-                <h6>                  
-                  bezzavislosti.cz
-                </h6>
-                <div>
-                  <a href="https://sketch.cloud/s/711wZ" target="_blank" rel="noopener" className="portfolio-project-asset">
-                    Sketch artboards
-                  </a>
-                 </div>
-                 <div>
-                  <a href="https://github.com/ivostork/biorezonance" target="_blank" rel="noopener" className="portfolio-project-asset">
-                    PUG,SCSS
-                  </a>
-                  </div>
-                </div>                
-              </div>              
-                <div className="col-auto">
-              <div className="portfolio-box mb-60">
-                <a href="https://sketch.cloud/s/dkZGn/QbbGG5m/play" target="_blank" rel="noopener" className="portfolio-link-project2">
-                  <img src={Logo4} alt="project3" />
-                  <span className="sr-only">
-                    Link to project 3
-                  </span>                  
-                </a>
-                <p className="portfolio-project-desc">
-                  Dummy web application for clients demo
-                </p>
-                <h6>                  
-                  SPUDO
-                </h6>
-                <div>
-                  <a href="https://sketch.cloud/s/dkZGn" target="_blank" rel="noopener" className="portfolio-project-asset">
-                    Sketch artboards
-                  </a>
-                  </div>                  
-                  </div>
-                </div> 
-            
-            <div className="col-auto">
-              <div className="portfolio-box mb-60">
-                <a href="https://ivostork.github.io/web-portfolio-project/app.html#/" target="_blank" rel="noopener" className="portfolio-link-project2">
-                  <img src={Logo2} alt="project2" />
-                  <span className="sr-only">
-                    Link to project 1
-                  </span>                  
-                </a>
-                <p className="portfolio-project-desc">
-                  Dummy web application for clients demo
-                </p>
-                <h6>                  
-                  Crofts Accountants
-                </h6>
-                <div>
-                  <a href="https://sketch.cloud/s/zKbmW" target="_blank" rel="noopener" className="portfolio-project-asset">
-                    Sketch artboards
-                  </a>
-                  </div>
-                  <div>
-                  <a className="portfolio-project-asset" href="https://ivostork.github.io/web-portfolio-project/styleguide.html#/colors" target="_blank" rel="noopener">
-                    Styleguide
-                  </a>
-                  </div>
-                  <a className="portfolio-project-asset" href="https://github.com/ivostork/code-portfolio-project" target="_blank" rel="noopener">
-                    React, SCSS
-                  </a>
-                  </div>
-                </div>   
-
-
-                </div>              
-              </div>                
+            {this.renderProjects()}
+          </div>
+      </div>
     );
   }
 }
